@@ -14,7 +14,14 @@ function ToDoList({
     <Container>
       <section>
         {filteredTodos.length === 0 ? (
-          <p className="text-gray-500">No tasks to show.</p>
+          <div className="text-center py-12">
+                <div className="text-base-content/50 text-lg">
+                  <p>No {filter === "all" ? "To Do Lists" : filter} found</p>
+                  <p className="text-sm mt-2">
+                    Start by adding your first To Do List above
+                  </p>
+                </div>
+              </div>
         ) : (
           <ul className="list-disc p-5">
             {filteredTodos.map((todo) => (
