@@ -16,6 +16,7 @@ export function useTodos() {
     } catch (error) {
       console.error("Error parsing todos from localStorage:", error);
     }
+    return [];
   });
 
   //   logic simpan data ke localstorage setiap kali todos mutasi
