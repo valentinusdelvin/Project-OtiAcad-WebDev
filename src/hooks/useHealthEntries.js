@@ -21,21 +21,21 @@ export function useHealthEntries() {
         type: "sugar",
         value: 100,
         description: "i think i had too much sugar today",
-        createdAt: new Date("2025-01-13T10:56:00"),
+        createdAt: new Date("2025-07-23T10:56:00"),
       },
       {
         id: "2",
         type: "sugar",
         value: 100,
         description: "i think i had too much sugar today",
-        createdAt: new Date("2025-01-13T10:56:00"),
+        createdAt: new Date("2025-07-23T10:56:00"),
       },
       {
         id: "3",
         type: "condition",
         value: 0,
         description: "Flu and headaches",
-        createdAt: new Date("2025-01-13T10:56:00"),
+        createdAt: new Date("2025-07-23T10:56:00"),
       },
     ];
   });
@@ -52,7 +52,7 @@ export function useHealthEntries() {
     const newEntry = {
       id: Date.now().toString(),
       type,
-      value: type === "condition" ? 0 : parseFloat(value),
+      value: type === "Condition" ? 0 : parseFloat(value),
       description: description.trim(),
       createdAt: new Date(),
     };
