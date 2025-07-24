@@ -1,6 +1,6 @@
 import React from 'react'
 import Container from '../../components/Container'
-import { CheckCircle, CupSoda, Droplet, FilterIcon, HeartPulse, ListChecks, PersonStanding, Trash2 } from 'lucide-react'
+import { CupSoda, Droplet, FilterIcon, HeartPulse, PersonStanding, Trash2 } from 'lucide-react'
 
 function HealthHistory({
     setFilter,
