@@ -1,11 +1,11 @@
-import React from 'react'
-import Container from '../../components/Container'
+import React from "react";
+import Container from "../../components/Container";
 
 function ClearButton({ stats, todos, setTodos }) {
   if (stats.completed === 0) return null;
 
   const handleClearCompleted = () => {
-    const activeTodos = todos.filter(todo => !todo.completed);
+    const activeTodos = todos.filter((todo) => !todo.completed);
     setTodos(activeTodos);
   };
 
@@ -20,7 +20,7 @@ function ClearButton({ stats, todos, setTodos }) {
         </button>
       </div>
     </Container>
-  )
+  );
 }
 
-export default ClearButton
+export default ClearButton;

@@ -5,9 +5,8 @@ import HealthStats from "./HealthStats";
 import HealthForm from "./HealthForm";
 import HealthHistory from "./HealthHistory";
 
-
 const HealthTracker = () => {
-  const {entries, setEntries, addEntry, deleteEntry} = useHealthEntries();
+  const { entries, setEntries, addEntry, deleteEntry } = useHealthEntries();
   const [inputType, setInputType] = useState("Calories");
   const [inputValue, setInputValue] = useState("");
   const [description, setDescription] = useState("");
@@ -16,7 +15,7 @@ const HealthTracker = () => {
   const todayStats = useMemo(() => {
     const today = new Date().toDateString();
     const todayEntries = entries.filter(
-      (entry) => entry.createdAt.toDateString() === today
+      (entry) => entry.createdAt.toDateString() === today,
     );
 
     const calories = todayEntries
@@ -101,7 +100,7 @@ const HealthTracker = () => {
       {/* Header */}
       <HeaderHealth />
       {/* Today's Summary */}
-      <HealthStats todayStats={todayStats}/>
+      <HealthStats todayStats={todayStats} />
       {/* Entry Form */}
       <HealthForm
         inputType={inputType}
@@ -113,7 +112,7 @@ const HealthTracker = () => {
         handleSubmit={handleSubmit}
         getDescriptionPlaceholder={getDescriptionPlaceholder}
         isFormValid={isFormValid}
-        />      
+      />
       {/* Entry History */}
       <HealthHistory
         setFilter={setFilter}
@@ -121,7 +120,7 @@ const HealthTracker = () => {
         filter={filter}
         filteredEntries={filteredEntries}
         deleteEntry={deleteEntry}
-        />
+      />
     </>
   );
 };

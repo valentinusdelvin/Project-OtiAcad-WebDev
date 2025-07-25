@@ -1,13 +1,12 @@
-import React from 'react'
-import Container from '../../components/Container'
+import React from "react";
+import Container from "../../components/Container";
 import { Filter as FilterIcon, CheckCircle, ListChecks } from "lucide-react";
 
 function ToDoFilter({ stats, filter, setFilter }) {
   return (
     <Container>
-      <section className='flex flex-col items-center justify-between gap-4 p-4'>
+      <section className="flex flex-col items-center justify-between gap-4 p-4">
         <div className="btn-group flex items-center gap-2">
-
           {/* All */}
           <button
             onClick={() => setFilter("all")}
@@ -40,11 +39,10 @@ function ToDoFilter({ stats, filter, setFilter }) {
             <CheckCircle className="h-4 w-4 mr-2" />
             Completed ({stats.completed})
           </button>
-
         </div>
       </section>
     </Container>
-  )
+  );
 }
 
-export default ToDoFilter
+export default ToDoFilter;

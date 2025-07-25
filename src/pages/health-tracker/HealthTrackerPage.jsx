@@ -1,10 +1,10 @@
-import HealthTracker from '../../module/health-tracker/HealthTracker'
+import HealthTracker from "../../module/health-tracker/HealthTracker";
 function HealthTrackerPage() {
   return (
     <>
-        <HealthTracker />
+      <HealthTracker />
     </>
-  )
+  );
 }
 
-export default HealthTrackerPage
+export default HealthTrackerPage;
